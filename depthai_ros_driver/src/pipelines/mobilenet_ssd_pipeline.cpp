@@ -16,7 +16,7 @@ protected:
     /**
      * @brief Default implementation for configure step, does nothing
      */
-    void onConfigure() {
+    void onConfigure(const std::sting& config_json) {
         // _pipeline = _depthai->create_pipeline(_pipeline_config_json);
         std::string nnPath = "mobilenet_ssd.blob";
 

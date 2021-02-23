@@ -15,7 +15,7 @@ protected:
     /**
      * @brief Default implementation for configure step, does nothing
      */
-    void onConfigure() {
+    void onConfigure(const std::sting& config_json) {
         auto colorCam = _pipeline.create<dai::node::ColorCamera>();
         auto xoutColor = _pipeline.create<dai::node::XLinkOut>();
 

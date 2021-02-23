@@ -16,7 +16,7 @@ protected:
     /**
      * @brief Default implementation for configure step, does nothing
      */
-    void onConfigure() {
+    void onConfigure(const std::sting& config_json) {
         bool withDepth = true;
 
         auto monoLeft  = _pipeline.create<dai::node::MonoCamera>();

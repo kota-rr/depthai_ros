@@ -22,7 +22,7 @@ public:
      * @brief The first function to get called, should have the setup ready for any future calls
      *
      */
-    void configure() { onConfigure(); }
+    void configure(const std::sting& config_json = "") { onConfigure(config_json); }
 
     /**
      * @brief interface called by the driver to get a pipeline ready-to-go
@@ -42,7 +42,7 @@ protected:
     /**
      * @brief Default implementation for configure step, does nothing
      */
-    virtual void onConfigure() {}
+    virtual void onConfigure(const std::sting& config_json) = 0;
 
     /**
      * @brief Returns a pipeline in constant time
